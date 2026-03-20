@@ -19,4 +19,4 @@ spec:
         - name: dockerhub-secret
       containers:
         - name: log-producer
-          image: ash2code/log-producer:v4
+          image: ash2code/log-producer:v9
