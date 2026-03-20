@@ -32,5 +32,5 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: false
+          push: true
           tags: ash2code/log-producer:${{ steps.version.outputs.VERSION }}
