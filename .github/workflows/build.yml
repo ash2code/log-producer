@@ -2,17 +2,7 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, dev ]
-    
-    paths:                       
-      - 'app.py'
-      - 'Dockerfile'
-      - 'requirements.txt'
-    paths-ignore:                 
-      - 'k8s/**'
-      - 'README.md'
-      - '.github/**'
-      
+    branches: [ main, dev ]     
   pull_request:
     branches: [ main ]
 
