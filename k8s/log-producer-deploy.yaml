@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-producer
+  namespace: k8s-test
+  labels:
+    app: log-producer
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: log-producer
+  template:
+    metadata:
+      labels:
+        app: log-producer
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: log-producer
+          image: ash2code/log-producer:v4
